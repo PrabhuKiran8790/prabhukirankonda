@@ -25,37 +25,81 @@ module.exports = {
         sans: ['var(--font-space-grotesk)', ...fontFamily.sans],
       },
       colors: {
-        primary: colors.pink,
+        primary: colors.blue,
         gray: colors.gray,
+        purpleCustom: '#3940F5',
+      },
+      keyframes: {
+        wave: {
+          '0%': { transform: 'rotate(0.0deg)' },
+          '15%': { transform: 'rotate(14.0deg)' },
+          '30%': { transform: 'rotate(-8.0deg)' },
+          '40%': { transform: 'rotate(14.0deg)' },
+          '50%': { transform: 'rotate(-4.0deg)' },
+          '60%': { transform: 'rotate(10.0deg)' },
+          '70%': { transform: 'rotate(0.0deg)' },
+          '100%': { transform: 'rotate(0.0deg)' },
+        },
+      },
+      animation: {
+        wave: 'wave 1.5s infinite',
       },
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {
             a: {
-              color: theme('colors.primary.500'),
+              textDecoration: 'none',
+              color: theme('colors.purpleCustom'),
+              fontWeight: '700',
               '&:hover': {
-                color: `${theme('colors.primary.600')}`,
+                color: `${theme('colors.fuchsia.500')}`,
+                textDecoration: 'underline',
+                textUnderlineOffset: '3px',
               },
               code: { color: theme('colors.primary.400') },
             },
             'h1,h2': {
               fontWeight: '700',
-              letterSpacing: theme('letterSpacing.tight'),
+              letterSpacing: theme('letterSpacing.wide'),
+            },
+            h2: {
+              textDecoration: 'underline',
+              textUnderlineOffset: '6px',
+              textDecorationThickness: '1px',
+            },
+            p: {
+              lineHeight: '2.75rem',
+              fontWeight: '500',
+            },
+            'li, ul': {
+              fontWeight: '500',
+              lineHeight: '2.75rem',
             },
             h3: {
               fontWeight: '600',
             },
+            strong: {
+              textDecoration: 'underline',
+              textUnderlineOffset: '4px',
+              textDecorationStyle: 'wavy',
+              textDecorationThickness: '2px',
+            },
             code: {
-              color: theme('colors.indigo.500'),
+              color: theme('colors.black'),
+              fontWeight: '700',
+              padding: '4px',
+              borderRadius: '0.375rem',
+              backgroundColor: theme('colors.gray.300'),
             },
           },
         },
         invert: {
           css: {
             a: {
-              color: theme('colors.primary.500'),
+              // color: theme('colors.primary.500'),
+              color: theme('colors.blue.400'),
               '&:hover': {
-                color: `${theme('colors.primary.400')}`,
+                color: `${theme('colors.green.400')}`,
               },
               code: { color: theme('colors.primary.400') },
             },
