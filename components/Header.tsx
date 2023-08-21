@@ -13,7 +13,7 @@ const Header = () => {
   const pathname = usePathname()
 
   return (
-    <header className="flex items-center justify-between py-10">
+    <header className="flex items-center justify-between shadow-md p-5 mt-3 bg-zinc-800 dark:bg-zinc-800 transition-colors duration-100 rounded-lg backdrop-blur-3xl bg-clip-padding backdrop-filter bg-opacity-10">
       <div>
         <Link href="/" aria-label={siteMetadata.headerTitle}>
           <div className="flex items-center justify-between">
@@ -37,10 +37,10 @@ const Header = () => {
             <Link
               key={link.title}
               href={link.href}
-              className={`hidden sm:block text-gray-900 dark:text-gray-100 ${
+              className={`hidden sm:block text-black dark:text-gray-100 hover:p-2 hover:bg-gray-400/50 hover:font-extrabold hover:dark:bg-zinc-700 hover:rounded-md ${
                 pathname.startsWith(link.href)
-                  ? 'p-2 bg-gray-200 font-extrabold text-base dark:bg-zinc-700 rounded-md '
-                  : 'text-base font-medium'
+                  ? 'p-2 bg-gray-400/50 font-extrabold text-base dark:bg-zinc-700 rounded-md'
+                  : 'text-lg font-medium'
               }`}
             >
               {link.title}
