@@ -10,23 +10,27 @@ const MAX_DISPLAY = 5
 export default function Home({ posts }) {
   return (
     <>
-      <div className="flex items-center justify-between space-y-4 mb-5">
-        <div>
+      <div className="flex items-center justify-between space-y-4 mt-7">
+        <div className="space-y-4">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             <span className="wave">👋🏻</span>, <span>I'm </span>
-            <span className="text-teal-400">Prabhu Kiran Konda</span>
+            <span className="text-sky-500 dark:text-teal-400">Prabhu Kiran Konda</span>
           </h1>
-          <p>
-            Welcome to my blog - here I share everything that I love.
-            <br />
-          </p>
+          <p>Welcome to my blog - here I share everything that I love.</p>
         </div>
+        <Image
+          src="/static/images/avatar.jpg"
+          alt="avatar"
+          width={150}
+          height={150}
+          className="h-50 w-50 p-2 rounded-full md:hidden shadow-lg shadow-gray-400"
+        />
         <Image
           src="/static/images/avatar.jpg"
           alt="avatar"
           width={200}
           height={200}
-          className="h-50 w-50 rounded-full shadow-lg shadow-gray-400"
+          className="h-50 w-50 rounded-full items-baseline justify-center hidden md:block shadow-lg shadow-gray-400"
         />
       </div>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">

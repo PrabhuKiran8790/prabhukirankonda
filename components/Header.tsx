@@ -13,7 +13,7 @@ const Header = () => {
   const pathname = usePathname()
 
   return (
-    <header className="flex items-center justify-between shadow-md p-5 mt-3 bg-zinc-800 dark:bg-zinc-800 transition-colors duration-100 rounded-lg backdrop-blur-3xl bg-clip-padding backdrop-filter bg-opacity-10">
+    <header className="flex items-center justify-between shadow-md p-5 mt-3 bg-gray-200 dark:bg-zinc-800 rounded-lg transition-colors duration-100">
       <div>
         <Link href="/" aria-label={siteMetadata.headerTitle}>
           <div className="flex items-center justify-between">

@@ -52,7 +52,7 @@ module.exports = {
               color: theme('colors.purpleCustom'),
               fontWeight: '700',
               '&:hover': {
-                color: `${theme('colors.fuchsia.500')}`,
+                color: `${theme('colors.red.600')}`,
                 textDecoration: 'underline',
                 textUnderlineOffset: '3px',
               },
