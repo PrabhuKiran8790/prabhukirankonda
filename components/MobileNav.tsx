@@ -39,7 +39,7 @@ const MobileNav = () => {
         </svg>
       </button>
       <div
-        className={`fixed left-0 top-0 z-10 h-full w-full transform opacity-95 dark:opacity-[0.98] bg-white duration-300 ease-in-out dark:bg-zinc-900/90 ${
+        className={`fixed left-0 top-0 z-10 h-full w-full transform opacity-95 dark:opacity-[0.98] bg-white duration-300 ease-in-out dark:bg-zinc-900 ${
           navShow ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -78,8 +78,8 @@ const MobileNav = () => {
         </nav>
         <div className="fixed bottom-3 left-1/2 transform -translate-x-1/2 bg-transparent text-white p-3 w-60">
           <div className="text-center text-base">
-            <div className="p-2 bg-gray-300 dark:bg-zinc-700/60 dark:text-gray-100 rounded-lg text-black -ml-10">
-              <p className="font-bold text-lg">Prabhu Kiran Konda</p>
+            <div className="p-2 bg-gray-300 dark:bg-zinc-700/60 rounded-lg -ml-10">
+              <p className="font-bold text-lg dark:text-white text-black">Prabhu Kiran Konda</p>
             </div>
           </div>
         </div>

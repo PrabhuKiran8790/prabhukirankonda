@@ -18,13 +18,13 @@ export default function Home({ posts }) {
           </h1>
           <p>Welcome to my blog - here I share everything that I love.</p>
         </div>
-        <div className="rounded-full md:hidden shadow-lg shadow-gray-400">
+        <div className="rounded-full md:hidden shadow-lg ">
           <Image
             src="/static/images/avatar.jpg"
             alt="avatar"
             width={150}
             height={150}
-            className="h-50 w-50 rounded-full"
+            className="h-50 w-50 rounded-full shadow-gray-300"
           />
         </div>
         <Image
@@ -49,7 +49,7 @@ export default function Home({ posts }) {
           {posts.slice(0, MAX_DISPLAY).map((post) => {
             const { slug, date, title, summary, tags } = post
             return (
-              <li key={slug} className="py-7">
+              <li key={slug} className="py-4">
                 <article>
                   <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
                     <dl>
@@ -58,13 +58,13 @@ export default function Home({ posts }) {
                         <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
                       </dd>
                     </dl>
-                    <div className="space-y-5 xl:col-span-3 hover:md:bg-gray-100 hover:md:dark:bg-zinc-800/90 md:p-2 md:-ml-6 rounded-lg">
+                    <div className="space-y-5 xl:col-span-3 hover:md:bg-gray-100 hover:md:dark:bg-zinc-800/90 xl:p-4 xl:-ml-6 rounded-lg">
                       <div className="space-y-6">
-                        <div className="">
-                          <h2 className="text-2xl font-bold leading-8 tracking-tight">
+                        <div>
+                          <h2 className="text-xl md:text-2xl font-bold  leading-8 tracking-tight">
                             <Link
                               href={`/blog/${slug}`}
-                              className="text-gray-900 dark:text-gray-100 hover:dark:text-green-400"
+                              className="text-gray-800 hover:underline underline-offset-4 dark:text-gray-100 hover:dark:text-green-400"
                             >
                               <div>{title}</div>
                             </Link>

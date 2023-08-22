@@ -11,8 +11,6 @@ import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 
 const editUrl = (path) => `${siteMetadata.siteRepo}/blob/main/data/${path}`
-const discussUrl = (path) =>
-  `https://mobile.twitter.com/search?q=${encodeURIComponent(`${siteMetadata.siteUrl}/${path}`)}`
 
 const postDateTemplate: Intl.DateTimeFormatOptions = {
   weekday: 'long',
@@ -79,7 +77,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                           {author.linkedin && (
                             <Link
                               href={author.linkedin}
-                              className="text-primary-500 dark:text-green-400 font-bold  hover:text-primary-600 dark:hover:text-green-500"
+                              className="text-primary-500 dark:text-green-400 font-bold hover:text-primary-600 dark:hover:text-green-500"
                             >
                               {author.linkedin.replace('https://www.linkedin.com/in/', 'linkedin/')}
                             </Link>
@@ -94,10 +92,6 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
               <div className="prose max-w-none pb-8 pt-10 dark:prose-invert">{children}</div>
               <div className="pb-6 pt-6 text-sm text-gray-700 dark:text-gray-300">
-                <Link href={discussUrl(path)} rel="nofollow">
-                  Discuss on Twitter
-                </Link>
-                {` • `}
                 <Link href={editUrl(filePath)}>View on GitHub</Link>
               </div>
               {siteMetadata.comments && (
