@@ -7,7 +7,7 @@ const siteMetadata = {
   language: 'en-us',
   theme: 'dark', // system, dark or light
   siteUrl: 'https://prabhukirankonda.vercel.app',
-  siteRepo: 'https://github.com/prabhukiran8790/prabhukirankonda',
+  siteRepo: 'https://github.com/PrabhuKiran8790/prabhukirankonda',
   siteLogo: '/static/images/logo.png',
   socialBanner: '/static/images/twitter-card.png',
   email: 'prabhukiran426@gmail.com',
