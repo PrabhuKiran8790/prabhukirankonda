@@ -61,9 +61,10 @@ const MobileNav = () => {
             <Link
               key={route.href}
               href={route.href}
+              onClick={onToggleNav}
               className={`group flex p-3 w-full justify-start cursor-pointer text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100 transition ${
                 pathname === route.href
-                  ? 'bg-gray-300 dark:bg-zinc-700/90 dark:text-green-500 p-2 rounded-md'
+                  ? 'bg-gray-300 dark:bg-zinc-700/60 dark:text-green-500 p-2 rounded-md'
                   : ''
               }
               `}
