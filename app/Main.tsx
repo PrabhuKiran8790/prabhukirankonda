@@ -18,28 +18,30 @@ export default function Home({ posts }) {
           </h1>
           <p>Welcome to my blog - here I share everything that I love.</p>
         </div>
-        <Image
-          src="/static/images/avatar.jpg"
-          alt="avatar"
-          width={150}
-          height={150}
-          className="h-50 w-50 p-2 rounded-full md:hidden shadow-lg shadow-gray-400"
-        />
+        <div className="rounded-full md:hidden shadow-lg shadow-gray-400">
+          <Image
+            src="/static/images/avatar.jpg"
+            alt="avatar"
+            width={150}
+            height={150}
+            className="h-50 w-50 rounded-full"
+          />
+        </div>
         <Image
           src="/static/images/avatar.jpg"
           alt="avatar"
           width={200}
           height={200}
-          className="h-50 w-50 rounded-full items-baseline justify-center hidden md:block shadow-lg shadow-gray-400"
+          className="h-50 w-50 rounded-full hidden md:block shadow-lg shadow-gray-400"
         />
       </div>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 pb-8 pt-6 md:space-y-5">
+        <div className="space-y-0 mt-3 md:mt-0 pb-2 pt-6 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Latest
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
+            Explore the latest posts.
           </p>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -47,7 +49,7 @@ export default function Home({ posts }) {
           {posts.slice(0, MAX_DISPLAY).map((post) => {
             const { slug, date, title, summary, tags } = post
             return (
-              <li key={slug} className="py-12">
+              <li key={slug} className="py-7">
                 <article>
                   <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
                     <dl>
@@ -56,15 +58,15 @@ export default function Home({ posts }) {
                         <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
                       </dd>
                     </dl>
-                    <div className="space-y-5 xl:col-span-3">
+                    <div className="space-y-5 xl:col-span-3 hover:md:bg-gray-100 hover:md:dark:bg-zinc-800/90 md:p-2 md:-ml-6 rounded-lg">
                       <div className="space-y-6">
-                        <div>
+                        <div className="">
                           <h2 className="text-2xl font-bold leading-8 tracking-tight">
                             <Link
                               href={`/blog/${slug}`}
-                              className="text-gray-900 dark:text-gray-100"
+                              className="text-gray-900 dark:text-gray-100 hover:dark:text-green-400"
                             >
-                              {title}
+                              <div>{title}</div>
                             </Link>
                           </h2>
                           <div className="flex flex-wrap">

@@ -124,8 +124,8 @@ export default function ListLayoutWithTags({
               {displayPosts.map((post) => {
                 const { path, date, title, summary, tags } = post
                 return (
-                  <li key={path} className="py-5">
-                    <article className="space-y-2 flex flex-col xl:space-y-0">
+                  <li key={path} className="py-5 md:-ml-6">
+                    <article className="space-y-2 flex flex-col xl:space-y-0 hover:bg-gray-100 hover:dark:bg-zinc-800/90 p-2 rounded-lg">
                       <dl>
                         <dt className="sr-only">Published on</dt>
                         <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
@@ -134,11 +134,16 @@ export default function ListLayoutWithTags({
                       </dl>
                       <div className="space-y-3">
                         <div>
-                          <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                            <Link href={`/${path}`} className="text-gray-900 dark:text-gray-100">
-                              {title}
-                            </Link>
-                          </h2>
+                          <div className="w-full flex flex-row justify-between">
+                            <div className="w-full">
+                              <Link
+                                href={`/${path}`}
+                                className="text-gray-900 dark:text-gray-100 hover:dark:text-green-400 text-2xl font-bold leading-8 tracking-tight"
+                              >
+                                <div>{title}</div>
+                              </Link>
+                            </div>
+                          </div>
                           <div className="flex flex-wrap">
                             {tags?.map((tag) => <Tag key={tag} text={tag} />)}
                           </div>

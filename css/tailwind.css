@@ -27,6 +27,10 @@ li {
   display: inline-block;
 }
 
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
 @keyframes wave-animation {
   0% {
     transform: rotate(0deg);

@@ -48,11 +48,12 @@ module.exports = {
         DEFAULT: {
           css: {
             a: {
-              textDecoration: 'none',
+              textDecoration: 'underline',
+              textUnderlineOffset: '4px',
+              textDecorationStyle: 'wavy',
               color: theme('colors.purpleCustom'),
               fontWeight: '700',
               '&:hover': {
-                color: `${theme('colors.red.600')}`,
                 textDecoration: 'underline',
                 textUnderlineOffset: '3px',
               },

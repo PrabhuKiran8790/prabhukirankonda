@@ -38,10 +38,10 @@ const Header = () => {
               <Link
                 key={link.title}
                 href={link.href}
-                className={`hidden sm:block text-black dark:text-gray-100 hover:p-2 hover:bg-gray-400/50 hover:font-extrabold hover:dark:bg-zinc-700 hover:rounded-md ${
+                className={`hidden sm:block p-2 text-black font-extrabold dark:text-gray-100 hover:bg-gray-400/50 hover:dark:bg-zinc-700 hover:rounded-md${
                   pathname.startsWith(link.href)
-                    ? 'p-2 bg-gray-400/50 font-extrabold text-base dark:bg-zinc-700 rounded-md'
-                    : 'text-lg font-medium'
+                    ? 'bg-gray-400/50 dark:bg-zinc-700 rounded-md'
+                    : 'text-lg hover:rounded-md'
                 }`}
               >
                 {link.title}
