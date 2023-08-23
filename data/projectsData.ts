@@ -6,6 +6,7 @@ const projectsData = [
     for.`,
     imgSrc: '/static/images/google.png',
     href: 'https://www.google.com',
+    techStack: ['React', 'Python'],
   },
   {
     title: 'The Time Machine',
@@ -14,6 +15,7 @@ const projectsData = [
     forgotten headphones with this simple yet affordable solution.`,
     imgSrc: '/static/images/time-machine.jpg',
     href: '/blog/the-time-machine',
+    techStack: ['React'],
   },
 ]
 

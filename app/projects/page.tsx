@@ -16,8 +16,8 @@ export default function Projects() {
             Showcase your projects with a hero image (16 x 9)
           </p>
         </div>
-        <div className="container py-12">
-          <div className="-m-4 flex flex-wrap">
+        <div className="py-5 -mx-3">
+          <div className="flex flex-wrap justify-center">
             {projectsData.map((d) => (
               <Card
                 key={d.title}
@@ -25,6 +25,7 @@ export default function Projects() {
                 description={d.description}
                 imgSrc={d.imgSrc}
                 href={d.href}
+                techStack={d.techStack}
               />
             ))}
           </div>

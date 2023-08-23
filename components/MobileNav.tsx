@@ -9,7 +9,6 @@ import { Menu, XSquare } from 'lucide-react'
 const MobileNav = () => {
   const [navShow, setNavShow] = useState(false)
   const pathname = usePathname()
-  console.log(pathname)
 
   const onToggleNav = () => {
     setNavShow((status) => {
