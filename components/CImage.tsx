@@ -9,7 +9,7 @@ interface CImageProps {
 function CImage({ src, caption }: CImageProps) {
   console.log()
   return (
-    <div className="mt-10 px-4">
+    <div className="mt-10">
       <Image
         loading="lazy"
         alt={caption}
