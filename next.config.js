@@ -67,6 +67,12 @@ module.exports = () => {
     },
     images: {
       domains: ['picsum.photos'],
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: '**',
+        },
+      ],
     },
     experimental: {
       appDir: true,

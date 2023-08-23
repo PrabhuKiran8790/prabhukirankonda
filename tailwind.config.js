@@ -48,14 +48,12 @@ module.exports = {
         DEFAULT: {
           css: {
             a: {
-              textDecoration: 'underline',
-              textUnderlineOffset: '4px',
-              textDecorationStyle: 'wavy',
               color: theme('colors.purpleCustom'),
               fontWeight: '700',
+              textUnderlineOffset: '4px',
               '&:hover': {
                 textDecoration: 'underline',
-                textUnderlineOffset: '3px',
+                textUnderlineOffset: '5px',
               },
               code: { color: theme('colors.primary.400') },
             },
@@ -81,7 +79,7 @@ module.exports = {
             },
             strong: {
               textDecoration: 'underline',
-              textUnderlineOffset: '4px',
+              textUnderlineOffset: '6px',
               textDecorationStyle: 'wavy',
               textDecorationThickness: '2px',
             },

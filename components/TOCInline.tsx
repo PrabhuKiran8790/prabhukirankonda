@@ -1,5 +1,4 @@
 import { Toc } from './remark-toc-headings'
-
 export interface TOCInlineProps {
   toc: Toc
   indentDepth?: number
@@ -44,8 +43,12 @@ const TOCInline = ({
   const tocList = (
     <ul>
       {filteredToc.map((heading) => (
-        <li key={heading.value} className={`${heading.depth >= indentDepth && 'ml-6'}`}>
-          <a href={heading.url} className="text-blue-600 dark:text-sky-500">
+        <li
+          style={{ listStyleType: 'none' }}
+          key={heading.value}
+          className={`${heading.depth >= indentDepth && 'ml-8'} leading-loose`}
+        >
+          <a href={heading.url} className="text-blue-600 dark:text-sky-500 no-underline">
             {heading.value}
           </a>
         </li>
@@ -56,9 +59,9 @@ const TOCInline = ({
   return (
     <>
       {asDisclosure ? (
-        <details open>
-          <summary className="ml-6 pt-2 pb-2 text-xl font-bold">Table of Contents</summary>
-          <div className="ml-6">{tocList}</div>
+        <details open className="bg-gray-200 dark:bg-zinc-800/95 rounded-lg p-2">
+          <summary className="ml-3 text-xl font-bold cursor-pointer">Table of Contents</summary>
+          <div className="ml-4 -mb-6 -mt-4">{tocList}</div>
         </details>
       ) : (
         tocList

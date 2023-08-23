@@ -7,14 +7,14 @@ tags: ['Python', 'Machine Learning']
 authors: ['default']
 ---
 
+<TOCInline toc={props.toc} asDisclosure />
+
 Imagine having over thousands of input features in your dataset and you’ve to train them all..well, sometimes we wish we could compress the dataset to less number of features. Right? well, we can do that using a special type of Neural Network called Auto-encoders.
 So, let’s have a brief introduction to Auto-encoders.
 
-<TOCInline toc={props.toc} />
-
 ## What in the world are Auto-encoders
 
-Auto-encoders are a branch of neural networks which basically compresses the information of the input variables into a reduced dimensional space and then it recreate the input data set to train it all over again.
+**Auto-encoders** are a branch of neural networks which basically compresses the information of the input variables into a reduced dimensional space and then it recreate the input data set to train it all over again.
 
 Auto-encoder consists of 3 main components
 
@@ -24,7 +24,10 @@ Auto-encoder consists of 3 main components
 
 **Encoder**: An encoder is a feed-forward, fully connected neural network that compresses the input into a latent space representation and encodes the input image as a compressed representation in a reduced dimension, and produces code. `The lower the size of the code, the higher the compression.`
 
-![Auto Encoder Architecture](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*DcsT4AtAq8dxqbDHP_Uppg.jpeg)
+<CImage
+  src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*DcsT4AtAq8dxqbDHP_Uppg.jpeg"
+  caption="Auto Encoder Architecture"
+/>
 
 **Code**: This part of the network contains the reduced representation of the input that is fed into the decoder.
 
@@ -45,7 +48,10 @@ Auto Encoders can have many different hyperparameters but the very important one
 
 Let’s look at how we can do dimensionality reduction using auto-encoders. Let’s take a dataset that has 12 features and 8664 columns. Now our goal is to compress the dataset into 6 features.
 
-![dataset with 6 features](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*5Lw8YLwLpAsq9wTNdSyDUA.jpeg)
+<CImage
+  src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*5Lw8YLwLpAsq9wTNdSyDUA.jpeg"
+  caption="Original dataset with 12 features"
+/>
 
 Let us scale the data so that all our data points lie in the same range
 
@@ -57,7 +63,10 @@ X_train_df = pd.DataFrame(df_scaled, columns=df.columns)
 X_train_df
 ```
 
-![dataset after scaling](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*6whoBrbY9x-2gzxbjJhWww.jpeg)
+<CImage
+  src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*6whoBrbY9x-2gzxbjJhWww.jpeg"
+  caption="dataset after scaling"
+/>
 
 Let’s build an auto-encoder with a code size of 6.
 
@@ -107,15 +116,20 @@ encoded_train = pd.DataFrame(X_train_encode,
                              columns=[f"X{x}" for x in range(1, X_train_encode.shape[1]+1)])
 ```
 
-![autoencoder model summary](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*7y62pJS6SXaorbOvOuW_ew.jpeg)
+<CImage
+  src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*7y62pJS6SXaorbOvOuW_ew.jpeg"
+  caption="autoencoder model summary"
+/>
 
-![Compressed version of the original (12 features) dataset with 6 features](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*ADFWIJH8y935y_q4YfNtlg.jpeg)
+<CImage
+  src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*ADFWIJH8y935y_q4YfNtlg.jpeg"
+  caption="Compressed version of the original (12 features) dataset with 6 features"
+/>
 
 We can see that output from the encoder which compressed our dataset into 6 features.
 
-![Input Vs. Reconstruction plot.](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*_lKNXKfS443uMV1WfyzwGg.jpeg)
-
-<div className="text-center text-sm">
-  Input Vs. Reconstruction plot. The red shaded portion shows the error between Original vs
-  Reconstructed data.
-</div>
+<CImage
+  src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*_lKNXKfS443uMV1WfyzwGg.jpeg"
+  caption="Input Vs. Reconstruction plot. The red shaded portion shows the error between Original vs
+  Reconstructed data."
+/>
