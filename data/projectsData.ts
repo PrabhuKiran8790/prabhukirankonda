@@ -8,10 +8,17 @@ const projectsData = [
   },
   {
     title: 'PDF Assistant: AI Powered Q&A for PDFs',
-    description: `Created a handy PDF Assistant tool. It utilizes OpenAI's LLM to provide accurate answers to user questions based on uploaded PDF files. I've made it user-friendly with a straightforward web interface using StreamLit. For added security, I've integrated Firebase authentication, and I've also used Firebase's real-time database for instant updates across devices. Plus, there's a guest mode for easy use without authentication requirements, and I've deployed it using Docker for effortless setup.`,
+    description: `Built a PDF Assistant tool using OpenAI's LLM to answer questions from uploaded PDF files. It has a user-friendly web interface with StreamLit, Firebase authentication for security, real-time updates via Firebase, a guest mode for no authentication, and easy Docker deployment.`,
     imgSrc: '/static/images/PDF_Assistant.png',
     href: 'https://huggingface.co/spaces/PrabhuKiranKonda/Streamlit-PDF-Assistant-Docker',
     techStack: ['Python', 'Streamlit', 'Docker', 'Firebase'],
+  },
+  {
+    title: 'College Student API: FastAPI with MongoDB',
+    description: `Developed a high-performance API using FastAPI and MongoDB Cloud Database for managing college student information. It includes CRUD operations and secure data handling. The API is deployed with Docker for easy setup and scalability.`,
+    imgSrc: '/static/images/FastAPI_MongDB.png',
+    href: 'https://huggingface.co/spaces/PrabhuKiranKonda/fastapi_mongoDB',
+    techStack: ['Python', 'FastAPI', 'MongoDB', 'Docker'],
   },
 ]
 
