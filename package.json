@@ -17,6 +17,8 @@
     "autoprefixer": "^10.4.13",
     "contentlayer": "0.3.4",
     "esbuild": "0.18.11",
+    "flowbite": "^1.8.1",
+    "flowbite-react": "^0.5.0",
     "github-slugger": "^1.4.0",
     "gray-matter": "^4.0.2",
     "image-size": "1.0.0",

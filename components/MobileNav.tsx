@@ -37,24 +37,6 @@ const MobileNav = () => {
             <XSquare size={28} />
           </button>
         </div>
-        {/* <div className="fixed mt-8 w-full space-y-1">
-          {headerNavLinks.map((link) => (
-            <div key={link.title} className="px-12 py-4">
-              <Link
-                href={link.href}
-                className={`text-2xl font-bold w-full tracking-widest text-gray-900 dark:text-gray-100 ${
-                  pathname === link.href
-                    ? 'bg-gray-300 dark:bg-zinc-700/90 dark:text-green-500 p-2 rounded-md'
-                    : ''
-                }`}
-                onClick={onToggleNav}
-              >
-                {link.title}
-              </Link>
-            </div>
-          ))}
-        </div> */}
-
         <div className="space-y-1 px-6 mr-4">
           {headerNavLinks.map((route) => (
             <Link

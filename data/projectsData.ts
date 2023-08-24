@@ -6,7 +6,7 @@ const projectsData = [
     for.`,
     imgSrc: '/static/images/google.png',
     href: 'https://www.google.com',
-    techStack: ['React', 'Python'],
+    techStack: ['React', 'Python', 'TensorFlow'],
   },
   {
     title: 'The Time Machine',
