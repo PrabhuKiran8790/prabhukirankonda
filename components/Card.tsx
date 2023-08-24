@@ -18,16 +18,16 @@ const Card = ({ title, description, imgSrc, href, techStack }) => {
   }
 
   return (
-    <a href={href} className="max-w-md">
+    <a href={href} className="max-w-lg">
       <div className="flex flex-col h-full overflow-hidden rounded-xl border-2 p-[6px] border-zinc-300 hover:border-black dark:border-zinc-700 hover:dark:border-white/90">
         {imgSrc && (
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 object-none">
             <Image
               alt={title}
               src={imgSrc}
-              className="object-cover object-center md:h-36 lg:h-48"
-              width={544}
-              height={306}
+              className="object-cover object-center md:h-72 lg:h-72"
+              width={500}
+              height={300}
             />
           </div>
         )}
