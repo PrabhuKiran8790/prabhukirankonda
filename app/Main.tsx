@@ -17,6 +17,12 @@ export default function Home({ posts }) {
             <span className="text-sky-500 dark:text-teal-400">Prabhu Kiran Konda</span>
           </h1>
           <p>Welcome to my blog - here I share everything that I love.</p>
+          <Link
+            href="/about"
+            className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white font-bold py-2 px-4 rounded mt-4 inline-block"
+          >
+            About Me
+          </Link>
         </div>
         <div className="rounded-full md:hidden shadow-lg ">
           <Image
