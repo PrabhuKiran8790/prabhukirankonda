@@ -46,6 +46,8 @@ Auto Encoders can have many different hyperparameters but the very important one
 - **Number of nodes per layer**: the auto-encoder architecture we’re working on is called a stacked auto-encoder since the layers are stacked one after another. Usually stacked autoencoders look like a “sandwich”. The number of nodes per layer decreases with each subsequent layer of the encoder and increases back in the decoder. Also, the decoder is symmetric to the encoder in terms of the layer structure. As noted above this is not necessary and we have total control over these parameters.
 - **Loss function**: we either use mean squared error (mse) or binary cross-entropy. If the input values are in the range [0, 1] then we typically use cross-entropy, otherwise, we use the mean squared error.
 
+## Code Implementation
+
 Let’s look at how we can do dimensionality reduction using auto-encoders. Let’s take a dataset that has 12 features and 8664 columns. Now our goal is to compress the dataset into 6 features.
 
 <CImage
