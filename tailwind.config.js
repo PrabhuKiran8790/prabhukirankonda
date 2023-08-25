@@ -68,7 +68,7 @@ module.exports = {
               textDecorationThickness: '1px',
             },
             p: {
-              lineHeight: '2.75rem',
+              lineHeight: '2.5rem',
               fontWeight: '500',
             },
             'li, ul': {
