@@ -28,7 +28,7 @@ const Pre = (props) => {
 
   const notify = () =>
     toast.success('Copied', {
-      position: 'bottom-right',
+      position: 'top-right',
       autoClose: 500,
       hideProgressBar: false,
       closeOnClick: true,
@@ -59,7 +59,7 @@ const Pre = (props) => {
         </button>
       )}
       <ToastContainer
-        position="bottom-right"
+        position="top-right"
         autoClose={500}
         hideProgressBar={false}
         newestOnTop={true}
@@ -69,7 +69,7 @@ const Pre = (props) => {
         draggable={false}
         theme="colored"
       />
-      <pre className="bg-zinc-800 dark:bg-zinc-800/40 text-base font-normal shadow-2xl font-mono rounded-lg">
+      <pre className="bg-zinc-900 dark:bg-zinc-800/40 text-base font-normal shadow-2xl font-mono rounded-lg">
         {props.children}
       </pre>
     </div>

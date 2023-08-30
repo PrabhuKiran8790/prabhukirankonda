@@ -1,23 +1,25 @@
 import { ReactNode } from 'react'
 import { formatDate } from 'pliny/utils/formatDate'
 import { CoreContent } from 'pliny/utils/contentlayer'
-import type { Blog } from 'contentlayer/generated'
+import type { Blog, Authors } from 'contentlayer/generated'
 import Comments from '@/components/Comments'
 import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
 import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import Image from '@/components/Image'
+import Tag from '@/components/Tag'
 
 interface LayoutProps {
   content: CoreContent<Blog>
-  children: ReactNode
+  authorDetails: CoreContent<Authors>[]
   next?: { path: string; title: string }
   prev?: { path: string; title: string }
+  children: ReactNode
 }
-
-export default function PostLayout({ content, next, prev, children }: LayoutProps) {
-  const { path, slug, date, title } = content
+export default function PostLayout({ content, authorDetails, next, prev, children }: LayoutProps) {
+  const { path, slug, date, title, tags } = content
 
   return (
     <SectionContainer>
@@ -36,6 +38,46 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
               </dl>
               <div>
                 <PageTitle>{title}</PageTitle>
+                <div className="flex flex-wrap items-center justify-center">
+                  {tags.map((tag) => (
+                    <Tag key={tag} text={tag} />
+                  ))}
+                </div>
+                <div className="flex items-center justify-center mt-4 -mb-4">
+                  <ul className="flex flex-wrap justify-center gap-4 sm:space-x-12 xl:block xl:space-x-0 xl:space-y-8 bg-gray-200 dark:bg-zinc-700/70 p-2 rounded-lg shadow-md hover:bg-gray-300 hover:dark:bg-zinc-700">
+                    {authorDetails.map((author) => (
+                      <li className="flex items-center space-x-2" key={author.name}>
+                        {author.avatar && (
+                          <Image
+                            src={author.avatar}
+                            width={38}
+                            height={38}
+                            alt="avatar"
+                            className="h-10 w-10 rounded-full"
+                          />
+                        )}
+                        <dl className="whitespace-nowrap text-base font-medium leading-5">
+                          <dt className="sr-only">Name</dt>
+                          <dd className="text-gray-900 dark:text-gray-100">{author.name}</dd>
+                          <dt className="sr-only">Linkedin</dt>
+                          <dd>
+                            {author.linkedin && (
+                              <Link
+                                href={author.linkedin}
+                                className="text-primary-500 dark:text-green-400 font-bold hover:text-primary-600 dark:hover:text-green-500"
+                              >
+                                {author.linkedin.replace(
+                                  'https://www.linkedin.com/in/',
+                                  'linkedin/'
+                                )}
+                              </Link>
+                            )}
+                          </dd>
+                        </dl>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </header>
