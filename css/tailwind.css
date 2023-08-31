@@ -11,7 +11,7 @@ img {
 }
 
 code {
-  @apply dark:text-green-400 dark:p-1 dark:rounded-md dark:bg-zinc-700;
+  @apply dark:text-green-400 dark:rounded-md dark:bg-zinc-700;
 }
 
 ul,

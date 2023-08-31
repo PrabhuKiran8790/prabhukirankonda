@@ -1,10 +1,11 @@
 .remark-code-title {
-  @apply rounded-t-lg bg-zinc-700 dark:bg-zinc-700/50 px-5 py-3 font-mono text-sm font-bold text-gray-200;
+  @apply rounded-t-lg text-center px-5 py-3 font-mono text-sm font-bold text-white bg-transparent z-10 relative;
 }
 
 .remark-code-title + div > pre {
-  @apply mt-0 rounded-t-none;
+  @apply -mt-10 text-white;
 }
+
 
 /* Code block styles */
 .code-highlight {
