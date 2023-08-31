@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 p {
-  @apply text-black dark:text-gray-300 text-base md:text-lg leading-loose;
+  @apply text-black dark:text-gray-300 text-base md:text-lg;
 }
 
 img {
@@ -16,7 +16,7 @@ code {
 
 ul,
 li {
-  @apply text-black dark:text-gray-300 text-base md:text-lg leading-loose;
+  @apply text-black dark:text-gray-300 text-base md:text-lg;
 }
 
 
