@@ -38,7 +38,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
               </dl>
               <div>
                 <PageTitle>{title}</PageTitle>
-                <div className="flex flex-wrap items-center justify-center">
+                {/* <div className="flex flex-wrap items-center justify-center">
                   {tags.map((tag) => (
                     <Tag key={tag} text={tag} />
                   ))}
@@ -77,7 +77,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                       </li>
                     ))}
                   </ul>
-                </div>
+                </div> */}
               </div>
             </div>
           </header>
