@@ -58,7 +58,7 @@ Let’s look at how we can do dimensionality reduction using auto-encoders. Let�
 
 Let us scale the data so that all our data points lie in the same range
 
-```py:somefile.py
+```py:autoencoder.py
 from sklearn.preprocessing import MinMaxScaler
 scaler = MinMaxScaler()
 df_scaled = scaler.fit_transform(df)
@@ -73,7 +73,7 @@ X_train_df
 
 Let’s build an auto-encoder with a code size of 6.
 
-```py
+```py:autoencoder.py
 import tensorflow as tf
 from tensorflow.keras.layers import Input, Dense
 from tensorflow.keras.models import Model
@@ -104,7 +104,7 @@ autoencoder.summary()
 
 let's train the model
 
-```py
+```py:autoencoder.py
 history = autoencoder.fit(X_train_df,
                           X_train_df,
                           epochs=100,
