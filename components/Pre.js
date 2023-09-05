@@ -39,25 +39,26 @@ const Pre = (props) => {
     })
 
   return (
-    <div ref={textInput} onMouseEnter={onEnter} onMouseLeave={onExit} className="relative">
-      {hovered && (
-        <button
-          aria-label="Copy code"
-          type="button"
-          className={`absolute z-10 right-2 top-2 h-8 w-8 ring-0 rounded bg-transparent ${
-            copied
-              ? 'border-green-400 focus:border-green-400 focus:outline-none'
-              : 'border-gray-300'
-          }`}
-          onClick={onCopy}
-        >
-          {copied ? (
-            <CopyCheck size={20} className={copied ? 'text-green-400' : 'text-white'} />
-          ) : (
-            <Copy size={20} className={copied ? 'text-green-400' : 'text-white'} />
-          )}
-        </button>
-      )}
+    <div
+      ref={textInput}
+      onMouseEnter={onEnter}
+      onMouseLeave={onExit}
+      className="relative bg-black rounded-lg"
+    >
+      <button
+        aria-label="Copy code"
+        type="button"
+        className={`absolute z-10 right-1 top-1 h-8 w-8 ring-0 rounded bg-transparent ${
+          copied ? 'border-green-400 focus:border-green-400 focus:outline-none' : 'border-gray-300'
+        }`}
+        onClick={onCopy}
+      >
+        {copied ? (
+          <CopyCheck size={20} className={copied ? 'text-green-400' : 'text-white'} />
+        ) : (
+          <Copy size={20} className={copied ? 'text-green-400' : 'text-white'} />
+        )}
+      </button>
       <ToastContainer
         position="top-right"
         autoClose={500}
@@ -71,12 +72,14 @@ const Pre = (props) => {
       />
 
       <pre className="bg-zinc-900 dark:bg-black/40 text-base font-normal shadow-2xl font-mono rounded-lg">
-        <div className="macOSdots flex gap-2 mb-4">
+        <div className="macOSdots flex gap-2 absolute z-10">
           <div className="rounded-full h-3 w-3 bg-red-500" />
           <div className="rounded-full h-3 w-3 bg-yellow-300" />
           <div className="rounded-full h-3 w-3 bg-green-400" />
         </div>
-        {props.children}
+        <pre className="bg-zinc-900 dark:bg-black/40 text-base font-normal shadow-2xl font-mono rounded-lg -mx-5 -my-3 mt-5">
+          {props.children}
+        </pre>
       </pre>
     </div>
   )

@@ -19,6 +19,14 @@ li {
   @apply text-black dark:text-gray-300 text-base md:text-lg;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+pre {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 
 .wave {
   animation-name: wave-animation; /* Refers to the name of your @keyframes element below */

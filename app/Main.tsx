@@ -64,7 +64,7 @@ export default function Home({ posts }) {
                         <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
                       </dd>
                     </dl>
-                    <div className="space-y-5 xl:col-span-3 hover:md:bg-gray-100 hover:md:dark:bg-zinc-800/90 xl:p-4 xl:-ml-6 rounded-lg">
+                    <div className="space-y-5 xl:col-span-3 hover:lg:bg-gray-100 hover:lg:dark:bg-zinc-800/90 xl:p-4 xl:-ml-6 rounded-lg">
                       <div className="space-y-6">
                         <div>
                           <h2 className="text-xl md:text-2xl font-bold  leading-8 tracking-tight">
