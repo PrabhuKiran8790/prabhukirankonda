@@ -26,7 +26,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
       <div className="hidden md:block">
         <ScrollTopAndComment />
       </div>
-      <article>
+      <article className="-mx-3">
         <div>
           <header>
             <div className="space-y-1 border-b border-gray-200 pb-10 text-center dark:border-gray-700">
