@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 p {
-  @apply text-black dark:text-gray-300 text-base md:text-lg;
+  @apply text-black dark:text-gray-300 text-base md:text-lg leading-relaxed lg:leading-loose;
 }
 
 img {
@@ -11,12 +11,12 @@ img {
 }
 
 code {
-  @apply dark:text-green-400 dark:rounded-md dark:bg-zinc-700;
+  @apply dark:text-green-400 rounded-md dark:bg-zinc-700;
 }
 
 ul,
 li {
-  @apply text-black dark:text-gray-300 text-base md:text-lg;
+  @apply text-black dark:text-gray-300 text-base md:text-lg leading-relaxed lg:leading-loose;
 }
 
 ::-webkit-scrollbar {

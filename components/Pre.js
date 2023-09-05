@@ -48,7 +48,7 @@ const Pre = (props) => {
       <button
         aria-label="Copy code"
         type="button"
-        className={`absolute z-10 right-1 top-1 h-8 w-8 ring-0 rounded bg-transparent ${
+        className={`absolute z-10 right-0 top-0 h-8 w-8 ring-0 rounded bg-transparent ${
           copied ? 'border-green-400 focus:border-green-400 focus:outline-none' : 'border-gray-300'
         }`}
         onClick={onCopy}
@@ -72,12 +72,12 @@ const Pre = (props) => {
       />
 
       <pre className="bg-zinc-900 dark:bg-black/40 text-base font-normal shadow-2xl font-mono rounded-lg">
-        <div className="macOSdots flex gap-2 absolute z-10">
+        <div className="macOSdots flex gap-2 absolute z-10 -mx-2 md:mx-0">
           <div className="rounded-full h-3 w-3 bg-red-500" />
-          <div className="rounded-full h-3 w-3 bg-yellow-300" />
-          <div className="rounded-full h-3 w-3 bg-green-400" />
+          <div className="rounded-full h-3 w-3 bg-[#f5bf4f]" />
+          <div className="rounded-full h-3 w-3 bg-emerald-400" />
         </div>
-        <pre className="bg-zinc-900 dark:bg-black/40 text-base font-normal shadow-2xl font-mono rounded-lg -mx-5 -my-3 mt-5">
+        <pre className="bg-zinc-900 dark:bg-black/40 text-base font-normal shadow-2xl font-mono rounded-lg -mx-7 md:-mx-5 -my-3 mt-5">
           {props.children}
         </pre>
       </pre>

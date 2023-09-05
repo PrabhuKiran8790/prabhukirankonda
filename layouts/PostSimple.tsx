@@ -23,7 +23,9 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
 
   return (
     <SectionContainer>
-      <ScrollTopAndComment />
+      <div className="hidden md:block">
+        <ScrollTopAndComment />
+      </div>
       <article>
         <div>
           <header>

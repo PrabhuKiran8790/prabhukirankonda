@@ -68,26 +68,23 @@ module.exports = {
               textDecorationThickness: '1px',
             },
             p: {
-              lineHeight: '2.5rem',
-              fontWeight: '500',
+              // lineHeight: '2.5rem',
+              // fontWeight: '500',
             },
             'li, ul': {
-              fontWeight: '500',
-              lineHeight: '2.75rem',
+              // fontWeight: '500',
+              // lineHeight: '2.5rem',
             },
             h3: {
               fontWeight: '600',
             },
             strong: {
-              textDecoration: 'underline',
-              textUnderlineOffset: '6px',
-              textDecorationStyle: 'wavy',
-              textDecorationThickness: '2px',
+              fontWeight: '800',
             },
             code: {
               color: theme('colors.black'),
               fontWeight: '700',
-              padding: '4px',
+              padding: '2px',
               borderRadius: '0.375rem',
               backgroundColor: theme('colors.gray.300'),
             },
