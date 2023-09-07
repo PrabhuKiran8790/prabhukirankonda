@@ -14,6 +14,13 @@ const projectsData = [
     techStack: ['Python', 'Streamlit', 'Docker', 'Firebase'],
   },
   {
+    title: 'GFPGAN Streamlit App: Face Restoration',
+    description: `Created a Streamlit app for the GFPGAN model to restore faces in images. It has a user-friendly interface, and easy Docker deployment.`,
+    imgSrc: '/static/images/GFPGAN.png',
+    href: 'https://huggingface.co/spaces/PrabhuKiranKonda/Streamlit-GFPGAN',
+    techStack: ['Python', 'Streamlit', 'Docker'],
+  },
+  {
     title: 'College Student API: FastAPI with MongoDB',
     description: `Developed a high-performance API using FastAPI and MongoDB Cloud Database for managing college student information. It includes CRUD operations and secure data handling. The API is deployed with Docker for easy setup and scalability.`,
     imgSrc: '/static/images/FastAPI_MongDB.png',
