@@ -22,16 +22,18 @@ export default async function Page() {
           {tagKeys.length === 0 && 'No tags found.'}
           {sortedTags.map((t) => {
             return (
-              <div key={t} className="mb-2 mr-5 mt-2">
-                <Tag text={t} />
-                <Link
-                  href={`/tags/${slug(t)}`}
-                  className="-ml-2 text-sm font-semibold uppercase text-gray-600 dark:text-gray-300"
-                  aria-label={`View posts tagged ${t}`}
-                >
-                  {` (${tagCounts[t]})`}
-                </Link>
-              </div>
+              <button key={t}>
+                <div className="mb-2 mr-5 mt-2 bg-gray-300 dark:bg-zinc-700 p-1 px-2 rounded-lg divide-x-2 divide-black dark:divide-white">
+                  <Tag text={t} />
+                  <Link
+                    href={`/tags/${slug(t)}`}
+                    className="-ml-2 text-base font-semibold uppercase text-gray-600 dark:text-gray-300"
+                    aria-label={`View posts tagged ${t}`}
+                  >
+                    {` ${tagCounts[t]}`}
+                  </Link>
+                </div>
+              </button>
             )
           })}
         </div>
