@@ -1,4 +1,21 @@
-const projectsData = [
+import { TechStack } from '@/components/techStack'
+interface ProjectDataProps {
+  title: string
+  description: string
+  imgSrc: string
+  href: string
+  techStack: TechStack[]
+}
+
+const projectsData: ProjectDataProps[] = [
+  {
+    title: 'AI-SaaS App: MultiGPT',
+    description:
+      'Created an AI-SaaS app using NextJS, React. It features a subscription based payment system using Stripe, user authentication, and a user-friendly interface. The app is deployed with Vercel for easy setup and scalability. It has several features like Chatbot, Code Generation, Image Generation, Audio Generation and Video Generation.',
+    imgSrc: '/static/images/multigpt.png',
+    href: 'https://multigpt-pk.vercel.app/',
+    techStack: ['NextJS', 'React', 'JavaScript'],
+  },
   {
     title: 'Full Stack Todo App',
     description: `Created a Todo application using SvelteKit, FastAPI, and PostgreSQL. It features JWT-based authentication for security and includes task categorization into sections like current todos, upcoming, overdue, and completed. Users can easily update, delete, and mark tasks as complete.`,
