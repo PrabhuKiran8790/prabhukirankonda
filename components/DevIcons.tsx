@@ -1,3 +1,5 @@
+import { techStack } from '@/components/techStack'
+
 export function PythonIcon() {
   return (
     <svg viewBox="0 0 128 128" height={22} width={22}>
@@ -493,33 +495,13 @@ export const DevIcons = {
   Docker: Docker,
   PyTorch: PyTorch,
   TensorFlow: TensorFlow,
-  NextJs: NextJs,
+  NextJS: NextJs,
   MySQL: MySQL,
   Git: Git,
   Streamlit: Streamlit,
   Svelte: Svelte,
   Firebase: Firebase,
 }
-
-const techStack = [
-  'Python',
-  'TypeScript',
-  'JavaScript',
-  'Java',
-  'React',
-  'NextJs',
-  'Svelte',
-  'TensorFlow',
-  'PyTorch',
-  'Streamlit',
-  'PostgreSQL',
-  'MySQL',
-  'MongoDB',
-  'Firebase',
-  'FastAPI',
-  'Docker',
-  'Git',
-]
 
 export function FamiliarTechStack() {
   return (
