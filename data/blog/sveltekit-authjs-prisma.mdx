@@ -286,9 +286,10 @@ NEXTAUTH_SECRET="58383abb3d6c7f7fb02eb71d97bd6dc7"
 ```
 
 Get Google and Github Client and Secret ID's
-to get google's Client and Secret ID, go to google developers console or follow this guide from google https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid
+to get google's Client and Secret ID, go to google developers console or follow [this](https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid) guide from google 
 and for Github, it's pretty easy. just go to Github developers settings and under OAuth Apps, add a new app and follow the on-screen instructions.
-One thing to be clear is that, while testing in local environment, you homepage URL (or javascript origins in google) must be `http://localhost:xxxx`, replace `xxxx` with your port number where your app runs and callback URL (or redirect) should be `http://localhost:xxxx/auth/callback/provider`, replace provider with github and google in their respective consoles.
+One thing to be clear is that, while testing in local environment, you homepage URL (or javascript origins in google) must be http://localhost:5173, replace `5173` with your port number where your app runs and callback URL (or redirect) should be 
+http://localhost:xxxx/auth/callback/provider, replace provider with github and google in their respective consoles.
 
 we are almost done with the setup. Now on to the SvelteKit part where we will be creating the login and protected routes.
 
@@ -303,8 +304,9 @@ First, let's create Navbar where we will have login button and if users are logg
 
 create a file named `navbar.svelte` in `src/lib/components` directory and add the following code to it.
 
-```html:src/lib/components/Navbar.svelte
+```html:Navbar.svelte
 <script>
+  // src/lib/components/Navbar.svelte 
   import * as Avatar from "$lib/components/ui/avatar";
   import * as DropdownMenu from "$lib/components/ui/dropdown-menu";
   import { page } from "$app/stores"; // we will get the session info from here
@@ -374,8 +376,9 @@ create a file named `navbar.svelte` in `src/lib/components` directory and add th
 
 add that `Navbar` component to `+layout.svelte` file in your root directory.
     
-```html:src/routes/+layout.svelte
+```html:+layout.svelte
 <script>
+  // src/routes/+layout.svelte
   import "../app.postcss";
   import { Navbar } from "$lib/components";
 </script>
@@ -391,8 +394,9 @@ add that `Navbar` component to `+layout.svelte` file in your root directory.
 
 and in your `+page.svelte` file inside your `src/routes` directory, add the following code.
 
-```html:src/routes/+page.svelte
+```html:+page.svelte
 <script>
+  // src/routes/+page.svelte
   import { page } from "$app/stores";
 </script>
 
@@ -408,8 +412,9 @@ if you run the project now, you will see the navbar and if you click on the logi
 
 let's create a login routes
 
-```html:src/routes/login/+page.svelte
+```html:+page.svelte
 <script lang="ts">
+  // src/routes/login/+page.svelte
   import { page } from "$app/stores";
   import Button from "$lib/components/ui/button/button.svelte";
   import * as Card from "$lib/components/ui/card";
@@ -504,8 +509,9 @@ this code is common to all routes. but only in login route, add a redirect block
 
 we are missing one component that is `AuthButton` that we have used in our Navbar. let's create that component.
 
-```html:src/lib/components/AuthButton.svelte
+```html:AuthButton.svelte
 <script>
+  // src/lib/components/AuthButton.svelte
   import { page } from "$app/stores";
   import { signOut } from "@auth/sveltekit/client";
   import Button from "./ui/button/button.svelte";
@@ -529,8 +535,9 @@ if the user is not logged in, we show a login button and if the user is logged i
 
 now, let's create a dashboard page. we will be using the same code that we have used in our home page.
 
-```html:src/routes/dashboard/+page.svelte
+```html:+page.svelte
 <script>
+  // src/routes/dashboard/+page.svelte
   export let data;
 </script>
 
@@ -544,7 +551,8 @@ now, let's create a dashboard page. we will be using the same code that we have 
 
 and in `src/routes/dashboard/+page.server.ts` file, add the following code.
 
-```diff-ts:src/routes/dashboard/+page.server.ts
+```diff-ts:+page.server.ts
+// src/routes/dashboard/+page.server.ts
 import { redirect } from "@sveltejs/kit";
 import type { PageServerLoad } from "../$types";
 
