@@ -4,6 +4,8 @@ import React from 'react'
 interface CImageProps {
   src: string
   caption: string
+  height?: number
+  width?: number
 }
 
 function CImage({ src, caption }: CImageProps) {
