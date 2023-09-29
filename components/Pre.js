@@ -71,13 +71,13 @@ const Pre = (props) => {
         theme="colored"
       />
 
-      <pre className="bg-zinc-900 dark:bg-black/40 text-base font-normal shadow-2xl font-mono rounded-lg">
+      <pre className="bg-black/40 text-base font-normal shadow-2xl font-mono rounded-lg">
         <div className="macOSdots flex gap-2 absolute z-10 -mx-2 md:mx-0">
           <div className="rounded-full h-3 w-3 bg-red-500" />
           <div className="rounded-full h-3 w-3 bg-[#f5bf4f]" />
           <div className="rounded-full h-3 w-3 bg-emerald-400" />
         </div>
-        <pre className="bg-zinc-900 dark:bg-black/40 text-base font-normal shadow-2xl font-mono rounded-lg -mx-7 md:-mx-5 -my-3 mt-5">
+        <pre className="bg-black/40 text-base font-normal shadow-2xl font-mono rounded-lg -mx-7 md:-mx-5 -my-3 mt-5">
           {props.children}
         </pre>
       </pre>
