@@ -16,6 +16,7 @@ export type TechStack =
   | 'FastAPI'
   | 'Docker'
   | 'Git'
+  | 'Prisma'
 
 export const techStack: TechStack[] = [
   'Python',
@@ -35,4 +36,5 @@ export const techStack: TechStack[] = [
   'FastAPI',
   'Docker',
   'Git',
+  'Prisma',
 ]

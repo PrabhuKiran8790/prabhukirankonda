@@ -9,6 +9,14 @@ interface ProjectDataProps {
 
 const projectsData: ProjectDataProps[] = [
   {
+    title: 'Dall-E Clone: AI Image Generation',
+    description:
+      'Created a Dall-E Clone using SvelteKit, OpenAI API, TailwindCSS, TypeScript, Prisma as an ORM and MySQL Database. Converted it into fully working SaaS which inludes Stripe Payment Integration, User Authentication (Github & Google), and User Friendly Interface. The app is deployed with Vercel for easy setup and scalability.',
+    href: 'https://dall-e-sveltekit.vercel.app/',
+    imgSrc: '/static/images/dall-e-svelte.png',
+    techStack: ['Svelte', 'TypeScript', 'MySQL', 'Prisma'],
+  },
+  {
     title: 'AI-SaaS App: MultiGPT',
     description:
       'Created an AI-SaaS app using NextJS, React. It features a subscription based payment system using Stripe, user authentication, and a user-friendly interface. The app is deployed with Vercel for easy setup and scalability. It has several features like Chatbot, Code Generation, Image Generation, Audio Generation and Video Generation.',
