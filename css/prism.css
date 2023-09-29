@@ -1,5 +1,5 @@
 .remark-code-title {
-  @apply rounded-t-lg text-center px-5 py-3 font-mono text-sm font-bold text-white bg-zinc-700 z-10 relative;
+  @apply rounded-t-lg text-center px-5 py-3 font-mono text-sm font-bold text-white bg-black z-10 relative;
 }
 
 .remark-code-title + div > pre {
