@@ -17,6 +17,7 @@ export type TechStack =
   | 'Docker'
   | 'Git'
   | 'Prisma'
+  | 'Drizzle'
 
 export const techStack: TechStack[] = [
   'Python',
@@ -37,4 +38,5 @@ export const techStack: TechStack[] = [
   'Docker',
   'Git',
   'Prisma',
+  'Drizzle',
 ]

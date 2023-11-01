@@ -9,12 +9,20 @@ interface ProjectDataProps {
 
 const projectsData: ProjectDataProps[] = [
   {
+    title: 'Corgi-AI: Create anything with AI',
+    description: 
+      'Corgi AI is a collection of AI tools for different usecases. It includes a chatGPT clone with streaming responses, Image Generation, Audio Generation, Image Restoration and PDF Chat(beta). It is a full fledged SaaS application with stripe payments. It is Deployed using Docker with a VPS hosting on fly.io',
+    href: 'https://corgi-ai.fly.dev',
+    imgSrc: '/static/images/corgi-ai-dashboard.png',
+    techStack: ['Svelte', 'TypeScript', 'PostgreSQL', 'Docker', 'Drizzle'],
+  },
+  {
     title: 'Dall-E Clone: AI Image Generation',
     description:
-      'Created a Dall-E Clone using SvelteKit, OpenAI API, TailwindCSS, TypeScript, Prisma as an ORM and MySQL Database. Converted it into fully working SaaS which inludes Stripe Payment Integration, User Authentication (Github & Google), and User Friendly Interface. The app is deployed with Vercel for easy setup and scalability.',
+      'Created a Dall-E Clone using SvelteKit, OpenAI API, TailwindCSS, TypeScript, Dirzzle ORM and MySQL Database. Converted it into fully working SaaS which inludes Stripe Payment Integration, User Authentication (Github & Google), and User Friendly Interface. The app is deployed with Vercel for easy setup and scalability.',
     href: 'https://dall-e-sveltekit.vercel.app/',
     imgSrc: '/static/images/dall-e-svelte.png',
-    techStack: ['Svelte', 'TypeScript', 'MySQL', 'Prisma'],
+    techStack: ['Svelte', 'TypeScript', 'MySQL', 'Drizzle'],
   },
   {
     title: 'AI-SaaS App: MultiGPT',
